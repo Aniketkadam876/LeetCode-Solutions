@@ -3,16 +3,20 @@ class Solution {
         if(nums.length <= 2){
             return -1;
         }
-        Arrays.sort(nums);
+        // Arrays.sort(nums);
 
-        return nums[1];
-        // int max = nums[0];
-        // int min = nums[0];
-        // for(int i = 1; i < nums.length; i++){
-        //     max = Math.max(max, nums[i]);
-        //     min = Math.min(min, nums[i]);
-        // }
+        // return nums[1];
+        int max = nums[0];
+        int min = nums[0];
+        for(int i = 1; i < nums.length; i++){
+            max = Math.max(max, nums[i]);
+            min = Math.min(min, nums[i]);
+        }
 
-        // for(int i )
+        for(int i=0;i<nums.length;i++){
+            if(nums[i]!=max && nums[i]!=min)
+            return nums[i];
+        }
+        return -1;
     }
 }
